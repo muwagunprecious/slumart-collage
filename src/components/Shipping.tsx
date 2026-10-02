@@ -1,7 +1,7 @@
 import { Package, ShieldCheck, Truck } from 'lucide-react';
 import { shippingFeatures } from '@/data';
 
-const icons = [Package, ShieldCheck, Truck];
+const icons = [ShieldCheck, Package, Truck];
 
 export default function Shipping() {
   return (
@@ -9,13 +9,14 @@ export default function Shipping() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="max-w-3xl text-left">
           <p className="mb-4 text-[13px] font-normal uppercase tracking-[0.25em] text-primary">
-            Delivery
+            Safe Worldwide Delivery
           </p>
           <h2 className="text-[37px] font-bold leading-[1.1] text-white sm:text-[47px]">
-            Safe & Reliable Worldwide
+            From Lagos to Collectors Worldwide
           </h2>
           <p className="mt-6 text-[20px] font-normal leading-[1.6] text-white/70">
-            Your artwork arrives secure, protected, and ready to install — wherever you are.
+            Every commissioned portrait is coated with archival protective sealants, securely
+            crated, and shipped insured with full end-to-end tracking.
           </p>
         </div>
 
@@ -25,7 +26,7 @@ export default function Shipping() {
             return (
               <div
                 key={i}
-                className="border border-white/20 p-8 transition-colors duration-400 hover:border-primary"
+                className="border border-white/20 p-8 transition-colors duration-400 hover:border-primary hover:bg-white/5"
               >
                 <span className="flex h-12 w-12 items-center justify-center border border-primary text-primary">
                   <Icon className="h-5 w-5" strokeWidth={1.5} />

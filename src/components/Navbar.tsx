@@ -3,9 +3,10 @@ import { Menu, X, Palette, Instagram, Mail } from 'lucide-react';
 
 const navLinks = [
   { label: 'Process', href: '#process' },
-  { label: 'Pricing', href: '#pricing' },
+  { label: 'Impact & Pricing', href: '#pricing' },
   { label: 'Gallery', href: '#gallery' },
   { label: 'About', href: '#about' },
+  { label: 'Testimonies', href: '#testimonies' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -33,17 +34,17 @@ export default function Navbar() {
         <a href="#top" className="flex items-center gap-2.5">
           <span
             className={`flex h-9 w-9 items-center justify-center rounded-sm border-2 transition-colors duration-400 ${
-              scrolled ? 'border-black text-black' : 'border-white text-white'
+              scrolled ? 'border-primary text-primary bg-primary/10' : 'border-primary text-primary bg-black/40'
             }`}
           >
-            <Palette className="h-4 w-4" strokeWidth={1.5} />
+            <Palette className="h-4 w-4" strokeWidth={2} />
           </span>
           <span
             className={`text-base font-bold uppercase tracking-[0.15em] transition-colors duration-400 ${
               scrolled ? 'text-black' : 'text-white'
             }`}
           >
-            Kriese
+            SLUMART
           </span>
         </a>
 
@@ -65,10 +66,20 @@ export default function Navbar() {
         {/* Social + mobile toggle */}
         <div className="flex items-center gap-4">
           <div className={`hidden items-center gap-3 lg:flex ${scrolled ? '' : 'text-white'}`}>
-            <a href="#" aria-label="Instagram" className={`transition-colors hover:text-primary ${scrolled ? 'text-black' : 'text-white/80'}`}>
+            <a
+              href="https://www.instagram.com/adetunwase360/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className={`transition-colors hover:text-primary ${scrolled ? 'text-black' : 'text-white/80'}`}
+            >
               <Instagram className="h-4 w-4" strokeWidth={1.5} />
             </a>
-            <a href="mailto:studio@commission-artist.com" aria-label="Email" className={`transition-colors hover:text-primary ${scrolled ? 'text-black' : 'text-white/80'}`}>
+            <a
+              href="mailto:info@slumart.org"
+              aria-label="Email"
+              className={`transition-colors hover:text-primary ${scrolled ? 'text-black' : 'text-white/80'}`}
+            >
               <Mail className="h-4 w-4" strokeWidth={1.5} />
             </a>
           </div>
@@ -94,7 +105,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="py-2.5 text-[13px] font-normal tracking-wide text-black border-b border-black/5"
+              className="py-2.5 text-[13px] font-normal tracking-wide text-black border-b border-black/5 hover:text-primary"
             >
               {link.label}
             </a>

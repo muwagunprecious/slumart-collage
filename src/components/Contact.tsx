@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send, CheckCircle2 } from 'lucide-react';
+import { Send, CheckCircle2, MapPin, Mail, Clock, Globe } from 'lucide-react';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -16,34 +16,59 @@ export default function Contact() {
           <div className="grid lg:grid-cols-5">
             {/* Left panel */}
             <div className="bg-black p-10 lg:col-span-2 lg:p-12">
-              <p className="text-[13px] font-normal uppercase tracking-[0.25em] text-primary">
-                Commission
+              <p className="text-[13px] font-semibold uppercase tracking-[0.25em] text-primary">
+                Commission & Support
               </p>
               <h2 className="mt-4 text-[28px] font-bold leading-[1.15] text-white sm:text-[32px]">
-                Start Your Portrait
+                Commission Art. Educate a Child.
               </h2>
               <p className="mt-5 text-[15px] font-normal leading-[1.5] text-white/70">
-                Share your photo and your vision. You'll receive a clear quote and concept before
-                any work begins.
+                Share your photo or project idea. You'll receive a detailed concept, quote, and impact
+                breakdown before work begins.
               </p>
               <div className="mt-10 space-y-5">
-                <div>
-                  <p className="text-[12px] font-normal uppercase tracking-wider text-white/40">
-                    Studio
-                  </p>
-                  <p className="mt-1 text-[15px] font-normal text-white/90">Nikolaus Kriese</p>
+                <div className="flex items-start gap-3">
+                  <MapPin className="mt-1 h-4 w-4 shrink-0 text-primary" />
+                  <div>
+                    <p className="text-[12px] font-normal uppercase tracking-wider text-white/40">
+                      Studio & Center
+                    </p>
+                    <p className="mt-0.5 text-[15px] font-normal text-white/90">
+                      Slum Art Foundation, Ijora Badia, Lagos, Nigeria
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-[12px] font-normal uppercase tracking-wider text-white/40">
-                    Worldwide Shipping
-                  </p>
-                  <p className="mt-1 text-[15px] font-normal text-white/90">Fully insured & tracked</p>
+
+                <div className="flex items-start gap-3">
+                  <Globe className="mt-1 h-4 w-4 shrink-0 text-primary" />
+                  <div>
+                    <p className="text-[12px] font-normal uppercase tracking-wider text-white/40">
+                      Worldwide Shipping
+                    </p>
+                    <p className="mt-0.5 text-[15px] font-normal text-white/90">
+                      Fully insured & tracked internationally
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-[12px] font-normal uppercase tracking-wider text-white/40">
-                    Delivery
-                  </p>
-                  <p className="mt-1 text-[15px] font-normal text-white/90">~20 business days</p>
+
+                <div className="flex items-start gap-3">
+                  <Clock className="mt-1 h-4 w-4 shrink-0 text-primary" />
+                  <div>
+                    <p className="text-[12px] font-normal uppercase tracking-wider text-white/40">
+                      Production Time
+                    </p>
+                    <p className="mt-0.5 text-[15px] font-normal text-white/90">~15–20 business days</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Mail className="mt-1 h-4 w-4 shrink-0 text-primary" />
+                  <div>
+                    <p className="text-[12px] font-normal uppercase tracking-wider text-white/40">
+                      Direct Inquiries
+                    </p>
+                    <p className="mt-0.5 text-[15px] font-normal text-white/90">info@slumart.org</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -53,16 +78,16 @@ export default function Contact() {
               {submitted ? (
                 <div className="flex h-full flex-col items-center justify-center py-16 text-center">
                   <CheckCircle2 className="h-14 w-14 text-primary" strokeWidth={1.5} />
-                  <h3 className="mt-6 text-[23px] font-bold text-black">Request Sent</h3>
+                  <h3 className="mt-6 text-[23px] font-bold text-black">Inquiry Received</h3>
                   <p className="mt-3 max-w-xs text-[15px] font-normal leading-[1.5] text-black/60">
-                    Thank you for your interest. You'll receive a personal response with a quote and
-                    concept within 48 hours.
+                    Thank you for supporting Slum Art Foundation. Our team will contact you with a
+                    personalized quote and concept within 48 hours.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-8 text-[13px] font-normal text-secondary underline underline-offset-4 hover:text-primary"
+                    className="mt-8 text-[13px] font-semibold text-primary underline underline-offset-4 hover:text-secondary"
                   >
-                    Send another request
+                    Send another inquiry
                   </button>
                 </div>
               ) : (
@@ -70,18 +95,18 @@ export default function Contact() {
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div>
                       <label className="block text-[12px] font-normal uppercase tracking-wider text-black/50">
-                        Name
+                        Your Name
                       </label>
                       <input
                         required
                         type="text"
-                        placeholder="Your full name"
+                        placeholder="Full name or organization"
                         className="mt-2 w-full border-b border-black/20 bg-transparent pb-2 text-[15px] font-normal text-black placeholder:text-black/30 focus:border-primary focus:outline-none transition-colors"
                       />
                     </div>
                     <div>
                       <label className="block text-[12px] font-normal uppercase tracking-wider text-black/50">
-                        Email
+                        Email Address
                       </label>
                       <input
                         required
@@ -93,35 +118,35 @@ export default function Contact() {
                   </div>
                   <div>
                     <label className="block text-[12px] font-normal uppercase tracking-wider text-black/50">
-                      Size Preference
+                      Commission or Inquiry Type
                     </label>
                     <select
                       className="mt-2 w-full border-b border-black/20 bg-transparent pb-2 text-[15px] font-normal text-black focus:border-primary focus:outline-none transition-colors"
                     >
-                      <option value="">Select a size</option>
-                      <option>Small (up to 24 in)</option>
-                      <option>Medium (24–48 in)</option>
-                      <option>Large (48–72 in)</option>
-                      <option>Extra Large (72–120 in)</option>
-                      <option>Not sure yet</option>
+                      <option value="">Select an option</option>
+                      <option>Personal Portrait Collage (Up to 24 in)</option>
+                      <option>Medium Mosaic Portrait (24–48 in)</option>
+                      <option>Large / Family Portrait (48–72 in)</option>
+                      <option>Corporate Installation or Wall Mural</option>
+                      <option>Foundation Partnership or Donation</option>
                     </select>
                   </div>
                   <div>
                     <label className="block text-[12px] font-normal uppercase tracking-wider text-black/50">
-                      Describe Your Vision
+                      Tell Us About Your Project
                     </label>
                     <textarea
                       required
                       rows={4}
-                      placeholder="Tell me about the subject, theme, or any special details..."
+                      placeholder="Share details about the subject, photo references, timeline, or location..."
                       className="mt-2 w-full resize-none border-b border-black/20 bg-transparent pb-2 text-[15px] font-normal text-black placeholder:text-black/30 focus:border-primary focus:outline-none transition-colors"
                     />
                   </div>
                   <button
                     type="submit"
-                    className="group inline-flex min-h-[70px] min-w-[280px] items-center justify-center gap-2 border-2 border-black bg-black px-10 text-[20px] font-bold tracking-wide text-white transition-all duration-300 hover:bg-transparent hover:text-black"
+                    className="group inline-flex min-h-[70px] min-w-[280px] items-center justify-center gap-2 border-2 border-black bg-black px-10 text-[20px] font-bold tracking-wide text-white transition-all duration-300 hover:border-primary hover:bg-primary hover:text-white"
                   >
-                    Send Request
+                    Send Commission Inquiry
                     <Send className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </button>
                 </form>

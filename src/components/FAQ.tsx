@@ -10,13 +10,14 @@ export default function FAQ() {
       <div className="mx-auto max-w-4xl px-6 lg:px-10">
         <div className="text-left">
           <p className="mb-4 text-[13px] font-normal uppercase tracking-[0.25em] text-primary">
-            FAQ
+            Frequently Asked Questions
           </p>
           <h2 className="text-[37px] font-bold leading-[1.1] text-black sm:text-[47px]">
-            Commissioned Paintings
+            About Slum Art & Commissions
           </h2>
           <p className="mt-6 text-[20px] font-normal leading-[1.6] text-black/70">
-            Everything you need to know before starting your portrait commission.
+            Learn more about our recycled materials, the PET Bottle School, international shipping,
+            and how commissions fund children's education in Lagos.
           </p>
         </div>
 

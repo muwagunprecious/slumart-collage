@@ -8,15 +8,15 @@ export default function About() {
           {/* Image */}
           <div className="relative order-2 lg:order-1">
             <img
-              src="https://images.pexels.com/photos/39205367/pexels-photo-39205367.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Artist working on a colorful portrait in the studio"
+              src="/images/slumart-15.jpg"
+              alt="Slum Art Foundation PET Bottle classroom and community gallery in Ijora Badia"
               className="h-[440px] w-full object-cover lg:h-[560px]"
             />
             {/* Floating badge */}
             <div className="absolute -left-4 bottom-8 bg-tertiary border border-black/10 p-5 hidden sm:block">
-              <p className="text-[37px] font-bold leading-none text-primary">3+</p>
+              <p className="text-[37px] font-bold leading-none text-primary">100%</p>
               <p className="mt-1.5 text-[12px] font-normal uppercase tracking-wider text-black/60">
-                Weeks Delivery
+                Proceeds Fund Children's Education
               </p>
             </div>
           </div>
@@ -24,33 +24,33 @@ export default function About() {
           {/* Content */}
           <div className="order-1 lg:order-2">
             <p className="mb-4 text-[13px] font-normal uppercase tracking-[0.25em] text-primary">
-              Portrait Painting on Canvas
+              Art as a Catalyst for Change
             </p>
             <h2 className="text-[37px] font-bold leading-[1.1] text-black sm:text-[47px]">
-              Let's Talk About Your Project
+              Empowering Youth Through Creativity & Upcycling
             </h2>
             <div className="mt-6 space-y-5 text-[20px] font-normal leading-[1.6] text-black/70">
               <p>
-                Whether you are looking for a bespoke painting, artwork for a private residence, or
-                a site-specific art project, I would be happy to personally advise you on the
-                concept, format and realization.
+                Founded by 4-time Guinness World Record-holding Nigerian artist Adetunwase Adenle,
+                Slum Art Foundation provides children living in vulnerable settlements like Ijora Badia
+                and Makoko with free education, mentorship, and creative skills.
               </p>
               <p>
-                I create commissioned artworks for private collectors, residences, companies and
-                exceptional spaces throughout Europe and worldwide. Capturing a person on canvas is
-                always an exciting and inspiring challenge.
+                From constructing an entire school and learning center using thousands of recycled plastic
+                PET bottles to crafting museum-worthy paper mosaic portraits from discarded magazines,
+                we turn environmental waste into life-changing opportunities.
               </p>
               <p>
-                In my portrait paintings, I aim to depict people as naturally as possible while
-                highlighting their personality in the most flattering way.
+                When you commission an artwork, you are directly paying a child's school fees,
+                funding their nutrition, and giving them the tools to build a dignified future.
               </p>
             </div>
 
             <a
               href="#contact"
-              className="group mt-8 inline-flex items-center gap-2 text-[20px] font-bold tracking-wide text-secondary transition-colors hover:text-primary"
+              className="group mt-8 inline-flex items-center gap-2 text-[20px] font-bold tracking-wide text-primary transition-colors hover:text-secondary"
             >
-              Get in touch
+              Support our mission
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
           </div>

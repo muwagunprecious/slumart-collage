@@ -10,11 +10,11 @@ export default function Process() {
             How It Works
           </p>
           <h2 className="text-[37px] font-bold leading-[1.1] text-black sm:text-[47px] lg:text-[47px]">
-            The Commission Process
+            The Creation & Impact Process
           </h2>
           <p className="mt-6 text-[20px] font-normal leading-[1.6] text-black/70">
-            From your first message to the final brushstroke, every step is personal, transparent,
-            and crafted with care.
+            From collecting recycled print media to delicate handcrafting, every step creates
+            sustainable art and provides dignified income and schooling for young artists.
           </p>
         </div>
 

@@ -47,4 +47,11 @@
   .duration-400 {
     transition-duration: 400ms;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

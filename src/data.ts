@@ -1,165 +1,242 @@
-// Centralized data for the Portrait Painting Commission site
+// Centralized data for Slum Art Foundation (SLUMART)
 
-export const galleryImages = [
+export interface GalleryImage {
+  src: string;
+  alt: string;
+  tall: boolean;
+}
+
+export interface ProcessStep {
+  number: string;
+  title: string;
+  description: string;
+}
+
+export interface VideoTestimonial {
+  videoSrc: string;
+  title: string;
+  quote: string;
+  author: string;
+  role: string;
+  location: string;
+}
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface ShippingFeature {
+  title: string;
+  description: string;
+}
+
+export const galleryImages: GalleryImage[] = [
   {
-    src: "https://images.pexels.com/photos/6432802/pexels-photo-6432802.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    alt: "Close-up of a painted portrait with textured brushwork",
-    tall: false,
-  },
-  {
-    src: "https://images.pexels.com/photos/4624252/pexels-photo-4624252.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    alt: "Artist hand painting a portrait on canvas",
+    src: "/images/slumart-1.jpg",
+    alt: "Handcrafted paper mosaic portrait of a woman using recycled magazine and newspaper text",
     tall: true,
   },
   {
-    src: "https://images.pexels.com/photos/31052376/pexels-photo-31052376.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    alt: "Artist painting a realistic portrait of a woman",
+    src: "/images/slumart-15.jpg",
+    alt: "The Slum Art PET Bottle School gallery showcasing community mosaic portraits under recycled bottle ceilings",
     tall: false,
   },
   {
-    src: "https://images.pexels.com/photos/31251944/pexels-photo-31251944.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    alt: "Close-up of artist painting a detailed portrait",
+    src: "/images/slumart-3.jpg",
+    alt: "Detailed recycled paper collage portrait of a smiling man with intricate typography",
     tall: true,
   },
   {
-    src: "https://images.pexels.com/photos/39205367/pexels-photo-39205367.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    alt: "Hand of an artist working on a colorful portrait",
+    src: "/images/slumart-16.jpg",
+    alt: "Monumental outdoor Slum Art mosaic mural installation spelling words with portraits in Ijora Badia",
     tall: false,
   },
   {
-    src: "https://images.pexels.com/photos/6607752/pexels-photo-6607752.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    alt: "Artist creating paintings in a studio surrounded by portraits",
+    src: "/images/slumart-2.jpg",
+    alt: "Vibrant paper collage portrait created by young artists at Slum Art studio",
+    tall: false,
+  },
+  {
+    src: "/images/slumart-6.jpg",
+    alt: "Expressive paper mosaic portrait featuring layered magazine colors and textures",
     tall: true,
   },
   {
-    src: "https://images.pexels.com/photos/34421644/pexels-photo-34421644.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    alt: "Artist in a vibrant studio painting a portrait",
+    src: "/images/slumart-17.jpg",
+    alt: "Wide panoramic view of the Slum Art community portrait wall installation at night",
     tall: false,
   },
   {
-    src: "https://images.pexels.com/photos/11077392/pexels-photo-11077392.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    alt: "Artist hand painting on canvas with a brush",
+    src: "/images/slumart-8.jpg",
+    alt: "Handcrafted portrait collage showcasing nuanced shading made entirely from newsprint",
+    tall: true,
+  },
+  {
+    src: "/images/slumart-9.jpg",
+    alt: "Artistic recycled paper portrait capturing facial contours with fine typography",
+    tall: false,
+  },
+  {
+    src: "/images/slumart-10.jpg",
+    alt: "Layered mosaic portrait created from upcycled print media by community youth",
+    tall: true,
+  },
+  {
+    src: "/images/slumart-11.jpg",
+    alt: "Unique collage portrait made with recycled paper by Slum Art youth",
+    tall: false,
+  },
+  {
+    src: "/images/slumart-12.jpg",
+    alt: "Fine paper mosaic artwork celebrating human expression and resilience",
+    tall: true,
+  },
+  {
+    src: "/images/slumart-13.jpg",
+    alt: "Custom commissioned paper collage portrait made from discarded paper",
+    tall: false,
+  },
+  {
+    src: "/images/slumart-5.jpg",
+    alt: "Intricate portrait art assembled piece-by-piece from discarded newsprint",
+    tall: true,
+  },
+  {
+    src: "/images/slumart-4.jpg",
+    alt: "Vibrant recycled paper mosaic portrait capturing bright warmth and character",
+    tall: false,
+  },
+  {
+    src: "/images/slumart-7.jpg",
+    alt: "Detailed mixed-media paper mosaic portrait by Slum Art Foundation",
     tall: true,
   },
 ];
 
-export const processSteps = [
+export const processSteps: ProcessStep[] = [
   {
     number: "01",
-    title: "Tell me your idea",
-    description: "Share photos, themes, or size preferences. Every commission begins with your vision.",
+    title: "Share Your Photo or Vision",
+    description: "Upload your portrait, family photo, or project brief. Our artistic team in Ijora Badia reviews composition, contrast, and color requirements.",
   },
   {
     number: "02",
-    title: "Receive a quote & concept",
-    description: "You get a clear price and timeframe before I start — no surprises, no hidden costs.",
+    title: "Recycled Paper Curation",
+    description: "Discarded magazines, newsprint, and clean waste paper are sourced locally and sorted by tone and texture, giving new life to forgotten materials.",
   },
   {
     number: "03",
-    title: "The painting process",
-    description: "Hand-painted using museum-grade materials, with progress updates on request throughout.",
+    title: "Handcrafted Paper Mosaic",
+    description: "Under the guidance of master artists, talented youth meticulously cut and paste each paper fragment by hand to create your one-of-a-kind portrait.",
   },
   {
     number: "04",
-    title: "Safe worldwide delivery",
-    description: "Professional packaging, tracking, and full insurance — your artwork arrives ready to hang.",
+    title: "Protected & Delivered Globally",
+    description: "Your artwork is professionally sealed, framed with museum protection, and shipped worldwide with tracking. 100% of proceeds support children's schooling and welfare.",
   },
 ];
 
-export const testimonials = [
+export const testimonials: VideoTestimonial[] = [
   {
-    quote:
-      "We are thrilled! What incredibly expressive portraits you've created for us. Thank you so much – we are absolutely delighted with both artworks!",
-    author: "Montana Institut",
-    location: "Switzerland",
+    videoSrc: "/videos/testimony-1.mp4",
+    title: "CNN International Spotlight",
+    quote: "The Slum Art Foundation in Lagos is turning discarded waste into world-class art, empowering children with education, creative skills, and a brighter future.",
+    author: "Larry Madowo",
+    role: "CNN International Correspondent",
+    location: "CNN",
   },
   {
-    quote:
-      "Please excuse my late reply. The painting was a complete success!!! The surprise worked out more than perfectly. Thank you so much again for the great execution!",
-    author: "T. D.",
-    location: "Germany",
+    videoSrc: "/videos/testimony-2.mp4",
+    title: "Art as a Lifeline",
+    quote: "Before Slum Art, education felt out of reach. Today, creating these portraits funds my school fees and feeds my family.",
+    author: "Blessing",
+    role: "Student & Mosaic Artist",
+    location: "Lagos, Nigeria",
   },
   {
-    quote:
-      "The painting arrived yesterday. It really looks fantastic! Thank you very much for the execution, explanations, and quick turnaround. Truly a big compliment!",
-    author: "M. M.",
-    location: "Austria",
+    videoSrc: "/videos/testimony-3.mp4",
+    title: "Transforming Waste into Value",
+    quote: "We turn discarded paper and plastic bottles into classrooms and fine art. This community has found its true creative voice.",
+    author: "Adunni",
+    role: "Slum Art Workshop Lead",
+    location: "Ijora Settlement",
   },
   {
-    quote:
-      "The painting arrived this morning. I would like to thank you very much for your beautiful work and will gladly keep your address in mind for possible future commissions.",
-    author: "J. E.",
-    location: "United Kingdom",
-  },
-];
-
-export const faqs = [
-  {
-    question: "Are prices the same for international clients?",
-    answer:
-      "Yes. Pricing is consistent regardless of the client's location. International commissions are handled under the same artistic and professional standards as local projects. Shipping and potential import costs are discussed separately and transparently.",
+    videoSrc: "/videos/testimony-4.mp4",
+    title: "Collector & Patron Experience",
+    quote: "Receiving our commissioned portrait was deeply moving. The craft is extraordinary, and knowing our purchase educated a child is priceless.",
+    author: "Marcus & Elena",
+    role: "Art Patrons & Collectors",
+    location: "London, UK",
   },
   {
-    question: "Is a custom painting an investment?",
-    answer:
-      "Many clients see commissioned paintings as long-term value pieces rather than short-term purchases. Beyond their personal and emotional significance, original artworks often retain or increase their value over time, especially when created as singular works with clear artistic authorship.",
-  },
-  {
-    question: "Is customs or import tax an issue?",
-    answer:
-      "Customs duties or import taxes depend on the destination country and local regulations. In most cases, artworks are shipped with proper documentation to ensure a smooth customs process. Any applicable import fees are typically the responsibility of the recipient, but I am happy to advise in advance.",
-  },
-  {
-    question: "How does worldwide shipping work?",
-    answer:
-      "Once the painting is completed and fully cured, it is professionally packed and shipped via specialized art logistics partners. All artworks are securely protected and insured during transit. I handle the shipping organization and keep you informed throughout the process.",
-  },
-  {
-    question: "Do you work with international clients?",
-    answer:
-      "Yes. International painting commissions are a core part of my practice. My clients include private collectors, couples, and institutions worldwide. Each project is approached individually, with clear communication and careful coordination across time zones.",
-  },
-  {
-    question: "What do I need for a commission request?",
-    answer:
-      "For your request, I need the desired size of the painting and a brief description of the subject. The best way is to send your reference images and details by email. Each artwork is created based on reference material with a careful and precise working process.",
-  },
-  {
-    question: "What is the delivery time?",
-    answer:
-      "For less elaborate motifs created with fast-drying materials, the production time is approximately 20 business days. If framing and shipping are required, allow an additional 3–5 business days. Larger oil paintings require a longer drying period — approximately 20–30 business days, plus shipping time.",
-  },
-  {
-    question: "What payment options are available?",
-    answer:
-      "Online bank transfer — you receive an invoice for the deposit and a proof of purchase. Cash payment is possible by prior arrangement. Secure credit card payments are processed via Stripe using a protected payment link.",
-  },
-  {
-    question: "When do I pay for a commissioned painting?",
-    answer:
-      "Upon confirmation of the commission, a 70% deposit is required. Once payment is received, I begin creating your painting. You will receive photos of the artwork during and after completion. If the painting does not yet fully meet your expectations, I will make further adjustments until you are satisfied.",
-  },
-  {
-    question: "What subjects are possible?",
-    answer:
-      "There are no limits to your desired subject. You are welcome to send multiple reference photos, which I will combine into a cohesive concept. Before painting begins, you receive one or more draft designs to review. Once you are happy with the proposed design, I begin creating your commissioned painting.",
+    videoSrc: "/videos/testimony-5.mp4",
+    title: "The Next Generation of Creators",
+    quote: "Every stroke and piece of paper carries our dreams. We are not defined by the slum; we are defined by our creativity.",
+    author: "Samuel",
+    role: "Junior Collage Artist",
+    location: "Ijora Badia, Lagos",
   },
 ];
 
-export const shippingFeatures = [
+export const faqs: FAQItem[] = [
   {
-    title: "Safe & Reliable",
-    description:
-      "All artworks are professionally packed and shipped worldwide. Your artwork arrives secure, protected and ready to install.",
+    question: "What is Slum Art Foundation?",
+    answer:
+      "Slum Art Foundation is an acclaimed non-profit organization co-founded by 4-time Guinness World Record holder Adetunwase Adenle, dedicated to empowering children in underserved slum communities in Lagos, Nigeria through creative education, art mentorship, and social advocacy.",
   },
   {
-    title: "Securely Packed & Safely Fixed",
-    description:
-      "Reinforced cardboard packaging and corner protection ensure that your artwork remains securely fixed and arrives undamaged.",
+    question: "What are the portraits made of?",
+    answer:
+      "Each portrait is an intricate, handcrafted paper mosaic collage created entirely from discarded and recycled materials, including magazines, newspapers, and clean waste packaging, meticulously layered and finished on high-grade canvas.",
   },
   {
-    title: "Worldwide Shipping with Tracking",
+    question: "How does my commission support the children?",
+    answer:
+      "When you commission a portrait or purchase artwork, 100% of the proceeds directly fund tuition, school uniforms, nutritious meals, art supplies, and healthcare for out-of-school children at the Slum Art Foundation.",
+  },
+  {
+    question: "What is the P.E.T. Bottle School?",
+    answer:
+      "Built in the Ijora Badia community in Lagos, our school was innovatively constructed using thousands of recycled plastic (PET) bottles, providing a safe, weatherproof educational center while teaching environmental sustainability and upcycling.",
+  },
+  {
+    question: "Do you ship internationally?",
+    answer:
+      "Yes! We ship commissioned artworks securely to private collectors, couples, galleries, and corporate clients worldwide. Every piece is professionally sealed, crated, and insured with full tracking.",
+  },
+  {
+    question: "How long does a custom portrait take to complete?",
+    answer:
+      "Because each portrait requires thousands of individually hand-cut paper fragments arranged to capture lifelike facial nuances and skin tones, production typically takes 2–4 weeks, followed by fast, insured international delivery.",
+  },
+  {
+    question: "Can corporate organizations commission large-scale installations?",
+    answer:
+      "Absolutely. We create custom corporate murals, executive portrait collections, and large-scale installations that celebrate sustainability, ESG milestones, and social impact for organizations globally.",
+  },
+  {
+    question: "What payment and support options are available?",
+    answer:
+      "We accept international bank transfers, major credit cards via secure online payment links, and direct donations to the Slum Art Foundation. All payments come with official documentation and transparent impact reporting.",
+  },
+];
+
+export const shippingFeatures: ShippingFeature[] = [
+  {
+    title: "Safe & Insured Worldwide",
     description:
-      "Insured worldwide shipping, including tracking and — if required — customs handling. Your artwork can be tracked at every stage of transport.",
+      "Every artwork is treated with protective archival coating, reinforced with impact-resistant packaging, and insured for complete peace of mind.",
+  },
+  {
+    title: "Direct Social Impact",
+    description:
+      "Your parcel arrives with a certificate of authenticity and an impact summary detailing the educational sponsorship enabled by your commission.",
+  },
+  {
+    title: "Real-Time Tracking",
+    description:
+      "Full end-to-end tracking provided by premier global logistics partners, ensuring prompt and safe delivery directly to your doorstep.",
   },
 ];
